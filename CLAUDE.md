@@ -9,7 +9,7 @@ Hosted on: GitHub Pages (custom domain weeklybullrun.com)
 DNS: Cloudflare (DNS-only, not proxied)
 
 ## File Structure
-- `index.html` — homepage with hero (latest issue) + archive list
+- `index.html` — homepage with hero (latest issue) + archive list. All links to the homepage use `href="/"` not `href="index.html"`
 - `archive.html` — full archive page
 - `about.html` — about page
 - `issue-01.html` through `issue-XX.html` — individual articles
@@ -19,7 +19,7 @@ DNS: Cloudflare (DNS-only, not proxied)
 1. Copy `issue-01.html` exactly (all CSS, all HTML structure)
 2. Name it `issue-XX.html` (next number in sequence)
 3. Update only: page title, article-title, article-deck, article-meta date, all h2 headings and p paragraphs, plain-english section
-4. Update `index.html`: change hero to new issue, add article-row above `<!-- NEW ISSUES GO HERE -->`
+4. Update `index.html`: change hero to new issue, add article-row above `<!-- NEW ISSUES GO HERE -->`. Use `href="/"` for all homepage links, never `href="index.html"`
 5. Update `archive.html`: add article-row above `<!-- NEW ISSUES GO HERE -->`
 6. Push to `draft/issue-XX` branch, open a non-draft PR to main
 7. Send Telegram notification to bot (see below)
