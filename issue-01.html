@@ -7,6 +7,22 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
+
+  html { scroll-timeline: --page-scroll block; }
+  @keyframes grow-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  #progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 3px;
+    background: #111;
+    transform-origin: 0 50%;
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 999;
+  }
   .container { max-width: 720px; margin: 0 auto; padding: 24px 24px 48px; }
   header { border-top: 3px solid #111; border-bottom: 1px solid #ccc; padding: 12px 0; display: flex; align-items: center; justify-content: space-between; }
   .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #111; text-decoration: none; }
@@ -36,6 +52,7 @@
 </style>
 </head>
 <body>
+<div id="progress"></div>
 <div class="container">
   <header>
     <a href="index.html" class="logo">The Weekly Bullrun</a>
