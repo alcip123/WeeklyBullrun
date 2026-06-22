@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue #04 — The Weekly Bullrun</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
+
+  html { scroll-timeline: --page-scroll block; }
+  @keyframes grow-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  #progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 3px;
+    background: #111;
+    transform-origin: 0 50%;
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 999;
+  }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 24px 48px; }
+  header { border-top: 3px solid #111; border-bottom: 1px solid #ccc; padding: 12px 0; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #111; text-decoration: none; }
+  #live-date { font-size: 11px; color: #888; letter-spacing: 0.04em; }
+  nav { border-bottom: 1px solid #ccc; padding: 7px 0; display: flex; gap: 20px; margin-bottom: 32px; }
+  nav a { font-size: 12px; color: #555; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+  nav a:hover { color: #111; }
+  .article-title { font-family: Georgia, 'Times New Roman', serif; font-size: 34px; font-weight: normal; line-height: 1.15; color: #111; margin-bottom: 12px; }
+  .article-deck { font-size: 17px; color: #555; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+  .article-meta { font-size: 12px; color: #aaa; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 10px 0; margin-bottom: 32px; }
+  .article-body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.8; color: #222; }
+  .article-body p { margin-bottom: 1.4em; }
+  .article-body h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    margin: 2em 0 0.6em;
+    line-height: 1.25;
+  }
+  .plain-english { background: #f9f9f9; border-left: 3px solid #111; padding: 16px 20px; margin-top: 2em; }
+  .plain-english h2 { font-size: 13px; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: normal; color: #555; margin-bottom: 10px; letter-spacing: 0; text-transform: none; }
+  .plain-english p { font-size: 15px; color: #444; margin-bottom: 0; font-family: Georgia, 'Times New Roman', serif; }
+  .back-link { display: inline-block; margin-top: 40px; font-size: 12px; color: #888; text-decoration: none; letter-spacing: 0.04em; }
+  .back-link:hover { color: #111; }
+  footer { border-top: 1px solid #ccc; padding-top: 14px; margin-top: 40px; display: flex; justify-content: space-between; font-size: 11px; color: #bbb; }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="container">
+  <header>
+    <a href="index.html" class="logo">The Weekly Bullrun</a>
+    <div id="live-date"></div>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <h1 class="article-title">The Ninth Percent &#8212; Insurance Is Breaking the Housing Math That Homebuilder Stocks Are Priced On</h1>
+  <div class="article-deck">Homeowners insurance has quietly reached a record 9 percent of the monthly mortgage payment, and the buyer qualification model that determines homebuilder earnings is built on a cost that equity analysts are not modeling.</div>
+  <div class="article-meta">By Alessio Cipriano &nbsp;·&nbsp; June 22, 2026</div>
+
+  <div class="article-body">
+
+    <h2>The Line Item Nobody Is Watching</h2>
+    <p>Mortgage rates have not moved meaningfully in six months. Homebuilder stocks are priced accordingly: flat to down, waiting for rate relief. The entire conversation about housing affordability centers on the 30-year fixed, currently at 6.65 percent.</p>
+    <p>That framing misses the actual problem.</p>
+    <p>Homeowners insurance now accounts for 9 percent of the typical American homeowner's monthly payment, the highest share ever recorded, according to Matic's January 2026 analysis. The average annual premium for a new policy rose 8.5 percent year over year, bringing the national average to roughly $3,057. In Illinois, State Farm implemented a 27 percent rate increase in mid-2025. Allstate followed with an 8.8 percent increase in February 2026. Illinois premiums rose 50 percent from 2021 to 2024. Nationally, premiums are up 24 percent since 2021.</p>
+    <p>The equity market is watching the Federal Reserve. The actual affordability constraint is appearing on a different line of the closing disclosure.</p>
+
+    <h2>How Insurance Breaks the Underwriting</h2>
+    <p>Mortgage lenders qualify borrowers on debt-to-income ratios. The income side is fixed. The debt side includes principal, interest, property taxes, and insurance. When insurance rises, the full payment rises. When the payment rises without a corresponding increase in income, buyers get priced out before they close.</p>
+    <p>That mechanism is operating at scale. Sixty-four percent of mortgage lenders surveyed by Matic said they experienced issues with home insurance either frequently or somewhat frequently over the past year. The issue: applicants who qualify at application no longer qualify at close because their premium came in higher than estimated. Or the property sits in a ZIP code where major carriers have stopped writing new policies entirely.</p>
+    <p>The states where insurer retreat is most advanced, Florida, California, and parts of Texas, account for a disproportionate share of new residential construction. These are not peripheral markets for homebuilders. They are core geographies.</p>
+    <p>The underwriting breakdown compounds an already-stretched affordability picture. At 6.65 percent, the monthly payment on a median-priced home already requires a household income above $100,000 to stay within standard debt-to-income limits. Adding a premium that has risen 24 percent since 2021 tightens that constraint further, without any change in the rate that shows up in analyst models.</p>
+
+    <h2>Who Gets Forced</h2>
+    <p>Homebuilders absorb the cost first.</p>
+    <p>D.R. Horton, the largest builder in the country by volume, reported a cancellation rate of 18 percent in Q1 2026. That figure held flat quarter over quarter. In a market where incentive spending is rising, flat cancellations mean the same number of buyers are walking away despite builders spending more to retain them. D.R. Horton raised its sales incentives during Q1 and said it expected them to remain elevated through fiscal 2026.</p>
+    <p>Lennar spent $54,947 per home in incentives as of Q2 2026. Its home sales gross margin fell 430 basis points over the prior year, from 22.3 percent to 18 percent. The company missed analyst earnings expectations in Q1 2026, citing persistent headwinds in affordability. Tariffs on construction materials, which pushed effective rates above 27 percent, added an estimated $11,000 to the cost of a typical new home, compounding the pressure from insurance.</p>
+    <p>Both companies are cutting price in real terms to offset the rising total cost of homeownership. Insurance is one reason those price cuts are not moving sales pace faster than they are.</p>
+
+    <h2>The Failure Path</h2>
+    <p>The stress builds without a single visible trigger.</p>
+    <p>Here is the sequence: insurers continue raising premiums or withdrawing from high-risk ZIP codes through 2026. Builders in Florida, Texas, and California face a shrinking pool of bankable buyers regardless of what the Fed does. Cancellation rates drift higher, not dramatically, but persistently. Builders respond by cutting start pace to manage inventory. Start pace is what drives revenue recognition for homebuilders.</p>
+    <p>When closings decline, revenue falls. When revenue falls while incentive spending stays elevated, margins compress further. The consensus earnings models for D.R. Horton and Lennar are currently built on modest start pace recovery in the second half of 2026, driven by assumed rate relief. If rising insurance costs neutralize the rate effect, those estimates are wrong.</p>
+    <p>The repricing happens in Q3 earnings, when the gap between forward guidance and actual closings becomes visible. Equity investors are then pricing a deterioration in the operating environment that was not obvious from rate data alone.</p>
+
+    <h2>What I'm Watching</h2>
+    <p>Four signals matter most. First, homebuilder cancellation rates in Q2 and Q3 2026. The 18 percent rate at D.R. Horton is the current baseline. Any sustained move above 20 percent while mortgage rates are flat or declining signals that something other than rates is driving buyer exits.</p>
+    <p>Second, the incentive-per-home figures at Lennar and D.R. Horton in Q2 2026 earnings. Lennar's $54,947 is already historically elevated. If it rises again despite steady or declining mortgage rates, builders are fighting a cost that their rate-relief thesis cannot address.</p>
+    <p>Third, state insurance commissioner filings for carrier withdrawals in Florida, Texas, and California. Each major carrier exit in an active new construction market tightens the buyer qualification pool in that geography.</p>
+    <p>Fourth, the Dallas Federal Reserve's ongoing research connecting insurance premium increases to mortgage delinquency rates. If that research publishes updated findings through mid-2026, it will be the first systematic evidence that the insurance problem has migrated from an affordability issue to a credit issue.</p>
+
+    <h2>How This Thesis Fails</h2>
+    <p>If the Federal Reserve delivers two or more rate cuts before year-end, the payment relief could be large enough to absorb rising insurance costs. A 50-basis-point rate reduction on a $400,000 mortgage reduces the monthly payment by approximately $130. If the insurance increase adds $60 to $80 per month, the rate cut wins on net.</p>
+    <p>If major insurers return to high-risk markets in force, the carrier retreat reverses. Premium increases of 27 to 50 percent restore underwriting profitability in most affected states, which is precisely what creates the incentive for new entrants and returning carriers. The market may be repricing risk rather than abandoning it.</p>
+    <p>If homebuilder land positions are concentrated outside the highest-insurance-risk markets, the geographic exposure is less severe than the national numbers imply. Builders with heavy presence in the Midwest and Mid-Atlantic face meaningfully less insurance dislocation than those concentrated in Florida and coastal Texas.</p>
+
+    <h2>Closing Thoughts</h2>
+    <p>The housing affordability problem has been framed entirely as a mortgage rate problem. That framing is incomplete.</p>
+    <p>Insurance costs are rising faster than rates are falling, and they show up on a line of the closing disclosure that equity models rarely touch.</p>
+
+    <div class="plain-english">
+      <h2>Plain English</h2>
+      <p>Even though mortgage rates haven't changed much lately, buying a home is quietly getting harder to afford for a reason that has nothing to do with the Federal Reserve. I argue this because homeowners insurance has reached a record share of the monthly mortgage payment, rising 24 percent since 2021, which pushes buyers past what lenders will approve even when interest rates stay flat. Although builders like Lennar and D.R. Horton have been spending tens of thousands of dollars per home in discounts and incentives to help buyers close deals, it isn't working as well as it used to. If insurance costs keep climbing and insurers keep pulling out of states like Florida and California, the pool of people who can actually qualify for a home loan in those markets may keep shrinking, which would eventually show up as lower sales and falling profits at the big homebuilder companies.</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">&#8592; Back to all issues</a>
+
+  <footer>
+    <span>The Weekly Bullrun</span>
+    <span>&#169; 2026 Alessio Cipriano</span>
+  </footer>
+</div>
+<script>
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const now = new Date();
+  document.getElementById('live-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+</script>
+</body>
+</html>
