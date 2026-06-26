@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue #06 — The Weekly Bullrun</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
+
+  html { scroll-timeline: --page-scroll block; }
+  @keyframes grow-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  #progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 3px;
+    background: #111;
+    transform-origin: 0 50%;
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 999;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 24px 48px; }
+  header { border-top: 3px solid #111; border-bottom: 1px solid #ccc; padding: 12px 0; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #111; text-decoration: none; }
+  #live-date { font-size: 11px; color: #888; letter-spacing: 0.04em; }
+  nav { border-bottom: 1px solid #ccc; padding: 7px 0; display: flex; gap: 20px; margin-bottom: 32px; }
+  nav a { font-size: 12px; color: #555; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+  nav a:hover { color: #111; }
+  .article-title { font-family: Georgia, 'Times New Roman', serif; font-size: 34px; font-weight: normal; line-height: 1.15; color: #111; margin-bottom: 12px; }
+  .article-deck { font-size: 17px; color: #555; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+  .article-meta { font-size: 12px; color: #aaa; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 10px 0; margin-bottom: 32px; }
+  .article-body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.8; color: #222; }
+  .article-body p { margin-bottom: 1.4em; }
+  .article-body h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    margin: 2em 0 0.6em;
+    line-height: 1.25;
+  }
+  .plain-english { background: #f9f9f9; border-left: 3px solid #111; padding: 16px 20px; margin-top: 2em; }
+  .plain-english h2 { font-size: 13px; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: normal; color: #555; margin-bottom: 10px; letter-spacing: 0; text-transform: none; }
+  .plain-english p { font-size: 15px; color: #444; margin-bottom: 0; font-family: Georgia, 'Times New Roman', serif; }
+  .back-link { display: inline-block; margin-top: 40px; font-size: 12px; color: #888; text-decoration: none; letter-spacing: 0.04em; }
+  .back-link:hover { color: #111; }
+  footer { border-top: 1px solid #ccc; padding-top: 14px; margin-top: 40px; display: flex; justify-content: space-between; font-size: 11px; color: #bbb; }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="container">
+  <header>
+    <a href="/" class="logo">The Weekly Bullrun</a>
+    <div id="live-date"></div>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <h1 class="article-title">The Memory Grab &#8212; Apple&#8217;s Price Hikes Are the Consumer Bill for the AI Buildout</h1>
+  <div class="article-deck">Apple raised prices on every Mac and iPad by as much as 33 percent because AI data centers signed the long-term supply deals first, and every consumer device maker is now competing for what the hyperscalers left behind.</div>
+  <div class="article-meta">By Alessio Cipriano &nbsp;·&nbsp; June 26, 2026 &nbsp;·&nbsp; [TIME]</div>
+
+  <div class="article-body">
+
+    <h2>What Apple Posted</h2>
+    <p>On June 25, Apple raised prices across its entire Mac and iPad line. The MacBook Air went from $1,099 to $1,299. The MacBook Pro from $1,699 to $1,999. The iPad Air from $599 to $749. The iPad Pro from $999 to $1,199. The Mac Studio M3 Ultra from $3,999 to $5,299. The increases averaged roughly 20 percent across the product line, with the high-end desktop rising 33 percent in a single day.</p>
+    <p>Apple&#8217;s stated reason: memory and storage costs.</p>
+    <p>That explanation is accurate and incomplete.</p>
+    <p>AAPL fell 6.12 percent to $275.15 on June 25. The market understood what Apple was not saying out loud.</p>
+
+    <h2>Why Memory Ran Out</h2>
+    <p>Samsung, SK Hynix, and Micron control more than 95 percent of global DRAM production. Over the past 18 months, all three systematically shifted wafer capacity toward high-bandwidth memory, the chip format required for AI accelerators. HBM now consumes 23 percent of global DRAM wafer output, up from roughly 8 percent in 2023. The hyperscalers — Microsoft, Google, Amazon, Meta — secured that capacity through long-term supply agreements signed in 2024 and early 2025, before consumer device makers understood the scale of what was being locked up.</p>
+    <p>Consumer DRAM and NAND flash, the memory and storage inside every MacBook and iPad, draw from the remaining capacity. DRAM contract prices rose 58 to 63 percent quarter-over-quarter in Q2 2026. NAND flash rose 70 to 75 percent. Memory and storage prices have roughly quadrupled over three quarters, according to Counterpoint Research. Data centers now consume an estimated 70 percent of all memory chips produced worldwide.</p>
+    <p>Intel CEO Lip-Bu Tan stated in January: there is no relief until 2028.</p>
+    <p>Apple is not absorbing those costs. It is passing them through, and the consumer is absorbing them instead.</p>
+
+    <h2>The Rest of the Industry Is Already There</h2>
+    <p>Apple is the most visible name in this story, not the first mover. Dell, Lenovo, HP, and Microsoft all raised prices earlier in 2026 over the same memory crunch. Microsoft raised Xbox console prices by $150. Sony and Nintendo made similar moves. Gartner forecasts a combined 130 percent surge in DRAM and SSD prices by year-end 2026, which it projects will push average PC prices up 17 percent compared with 2025. The constraint sits upstream of every brand. Every brand is repricing.</p>
+    <p>The iPhone has not moved yet. Apple held the iPhone 16 line at current prices to protect demand elasticity, but analysts expect the iPhone 17, due this fall, to open at $1,099 for the base model, up $50 from the iPhone 16. Premium models are expected to rise by $100. Apple is managing iPhone pricing separately because phones face sharper consumer resistance to price increases than computers do.</p>
+
+    <h2>The Volume Problem the Price Increase Creates</h2>
+    <p>Macs and iPads have longer replacement cycles than phones. The average Mac replacement cycle runs approximately four years. A buyer who was marginal at $1,099 for a MacBook Air is no longer a buyer at $1,299. IDC projected consumer PC market volume to grow 3 to 4 percent in 2026. That projection preceded the broad repricing wave. A 17 percent average price increase across the industry is not consistent with volume growth in a market that was already recovering slowly from a post-pandemic demand correction.</p>
+    <p>Higher prices on lower volumes produce worse unit economics than steady prices on growing volumes. The margin benefit of passing through memory costs does not fully offset the revenue impact of lost units. Apple&#8217;s stock fell because the market ran that arithmetic in real time.</p>
+    <p>The average American household owns 2.3 computing devices. Replacement purchases are not optional in the way that discretionary spending is, but they are deferrable. A buyer who expected to pay $1,099 and finds the price at $1,299 can run the old machine another year. Multiplied across millions of households, that deferral compresses total consumer electronics spending without appearing immediately in any single company&#8217;s results.</p>
+
+    <h2>Where the Pressure Spreads</h2>
+    <p>The consumer electronics channel runs on volume. Best Buy, Target, and Walmart electronics departments generate margin through attachment sales — extended warranties, accessories, software — tied to device purchases. Fewer device transactions reduce that attachment revenue proportionally. The repricing Apple announced is not isolated to Apple&#8217;s income statement.</p>
+    <p>Component suppliers to Apple face the same arithmetic. Broadcom, Qualcomm, and Texas Instruments receive orders calibrated to Apple&#8217;s unit production plans. If Apple cuts Mac and iPad build rates in response to weaker sell-through, component orders fall before Apple&#8217;s own financials fully show the decline. Broadcom derives a meaningful share of revenue from Apple&#8217;s device portfolio. A sustained reduction in Apple unit volumes flows into Broadcom&#8217;s order book within two to three quarters.</p>
+    <p>The smartphone ASP story follows the same path with a lag. IDC projects smartphone average selling prices to rise 3 to 8 percent in 2026 from the same memory squeeze. If that materializes, the replacement cycle on phones — already running at roughly 40 months in the U.S. — extends further. Carrier upgrade programs, which are structured around predictable replacement cadences, face pressure on attach rates and financing volume.</p>
+
+    <h2>What Breaks This</h2>
+    <p>Two scenarios compress the shortage faster than the 2028 timeline.</p>
+    <p>If AI capital expenditure slows sharply, HBM demand falls and Samsung, SK Hynix, and Micron can reallocate wafer capacity back toward consumer DRAM. Microsoft, Google, and Amazon have all indicated they plan to sustain or increase data center spending through 2027. A change in that posture, driven by a slowdown in AI monetization, is the primary relief valve.</p>
+    <p>The second scenario is new fab capacity coming online earlier than projected. TSMC, Samsung, and Micron all have expansion projects underway, and production timelines can compress if demand signals are strong enough. The industry has built out faster than expected before. The memory shortages of 2017 and 2021 both resolved earlier than most forecasts predicted.</p>
+    <p>Both scenarios require conditions that do not currently exist.</p>
+
+    <div class="plain-english">
+      <h2>Plain English</h2>
+      <p>Even though Apple stores are still open and you can still walk in and buy a MacBook or iPad today, those devices cost significantly more than they did a week ago, and the increase is not a pricing decision Apple made to protect its margins. I argue this because the companies that manufacture the memory chips inside every laptop and tablet — a market controlled by three companies — have sold the bulk of their production capacity to artificial intelligence data centers under long-term contracts, leaving the consumer market to compete for whatever remains, and that competition is now showing up as a 20 to 33 percent price increase on products millions of people rely on. Although Apple is the most visible name raising prices, every major computer manufacturer has already done the same, and the industry forecasts no relief before 2028. If you were planning to replace a laptop, desktop, or tablet in the next year or two, you should expect to pay more than you budgeted for, and waiting is unlikely to help.</p>
+    </div>
+  </div>
+
+  <a href="/" class="back-link">&#8592; Back to all issues</a>
+
+  <footer>
+    <span>The Weekly Bullrun</span>
+    <span>&#169; 2026 Alessio Cipriano</span>
+  </footer>
+</div>
+<script>
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const now = new Date();
+  document.getElementById('live-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+</script>
+</body>
+</html>
