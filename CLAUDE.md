@@ -18,7 +18,9 @@ DNS: Cloudflare (DNS-only, not proxied)
 ## How to Add a New Issue
 1. Copy `issue-01.html` exactly (all CSS, all HTML structure)
 2. Name it `issue-XX.html` (next number in sequence)
-3. Update only: page title, article-title, article-deck, article-meta date, all h2 headings and p paragraphs, plain-english section
+3. Update only: page title, article-title, article-deck, article-meta date + time, all h2 headings and p paragraphs, plain-english section
+   - The article-meta line must include the publish time in ET: `By Alessio Cipriano &nbsp;·&nbsp; [Date] &nbsp;·&nbsp; [H:MM AM/PM ET]`
+   - Capture the exact current time by running: `powershell -Command "[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date), 'Eastern Standard Time').ToString('h:mm tt')"` — use that output directly. Never approximate or default to a round number.
 4. Update `index.html`: change hero to new issue, add article-row above `<!-- NEW ISSUES GO HERE -->`. Use `href="/"` for all homepage links, never `href="index.html"`
 5. Update `archive.html`: add article-row above `<!-- NEW ISSUES GO HERE -->`
 6. Push to `draft/issue-XX` branch, open a non-draft PR to main
