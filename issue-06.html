@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue #06 — The Weekly Bullrun</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
+
+  html { scroll-timeline: --page-scroll block; }
+  @keyframes grow-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  #progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 3px;
+    background: #111;
+    transform-origin: 0 50%;
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 999;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 24px 48px; }
+  header { border-top: 3px solid #111; border-bottom: 1px solid #ccc; padding: 12px 0; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #111; text-decoration: none; }
+  #live-date { font-size: 11px; color: #888; letter-spacing: 0.04em; }
+  nav { border-bottom: 1px solid #ccc; padding: 7px 0; display: flex; gap: 20px; margin-bottom: 32px; }
+  nav a { font-size: 12px; color: #555; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+  nav a:hover { color: #111; }
+  .article-title { font-family: Georgia, 'Times New Roman', serif; font-size: 34px; font-weight: normal; line-height: 1.15; color: #111; margin-bottom: 12px; }
+  .article-deck { font-size: 17px; color: #555; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+  .article-meta { font-size: 12px; color: #aaa; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 10px 0; margin-bottom: 32px; }
+  .article-body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.8; color: #222; }
+  .article-body p { margin-bottom: 1.4em; }
+  .article-body h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    margin: 2em 0 0.6em;
+    line-height: 1.25;
+  }
+  .plain-english { background: #f9f9f9; border-left: 3px solid #111; padding: 16px 20px; margin-top: 2em; }
+  .plain-english h2 { font-size: 13px; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: normal; color: #555; margin-bottom: 10px; letter-spacing: 0; text-transform: none; }
+  .plain-english p { font-size: 15px; color: #444; margin-bottom: 0; font-family: Georgia, 'Times New Roman', serif; }
+  .back-link { display: inline-block; margin-top: 40px; font-size: 12px; color: #888; text-decoration: none; letter-spacing: 0.04em; }
+  .back-link:hover { color: #111; }
+  footer { border-top: 1px solid #ccc; padding-top: 14px; margin-top: 40px; display: flex; justify-content: space-between; font-size: 11px; color: #bbb; }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="container">
+  <header>
+    <a href="/" class="logo">The Weekly Bullrun</a>
+    <div id="live-date"></div>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <h1 class="article-title">The Repossession Math &#8212; How Pandemic-Era Car Loans Are Breaking the Finance Arms That Made Them</h1>
+  <div class="article-deck">Subprime auto loan delinquencies have hit a 32-year record while the broader economy looks stable, and the losses are landing on non-bank lenders that fund themselves on the same ABS market whose collateral is now deteriorating.</div>
+  <div class="article-meta">By Alessio Cipriano &nbsp;·&nbsp; June 26, 2026</div>
+
+  <div class="article-body">
+
+    <h2>The Number That Does Not Fit the Economic Story</h2>
+    <p>In the first quarter of 2026, 5.6% of outstanding auto loan debt in the United States was at least 90 days delinquent. That figure, reported by the Federal Reserve Bank of New York, is the highest since the fourth quarter of 2010, surpassing the previous post-crisis peak of 5.3%. Total outstanding auto loan balances stand at $1.685 trillion, up 57.3% from a decade earlier.</p>
+    <p>The comparison to 2010 is the problem. The fourth quarter of 2010 came during mass unemployment, collapsing home prices, and a credit market that had just seized. The first quarter of 2026 arrives with headline unemployment below 5% and consumer spending appearing intact. By that comparison, the auto delinquency rate should be materially lower.</p>
+    <p>It is not.</p>
+    <p>Subprime borrowers tell a sharper story than the headline figure. Their 60-or-more-day delinquency rate reached 6.90% as of January 2026, the highest since January 1994 -- a 32-year record. Among subprime loans packaged into asset-backed securities, 30-plus-day delinquency reached 16% by late 2025, against a prime ABS delinquency rate of 1.9%. These are not adjacent credit regimes. They are entirely different markets performing under entirely different stress.</p>
+
+    <h2>The 2022 Vintage Problem</h2>
+    <p>The delinquency surge is not distributed evenly across the loan book. It is concentrated in loans originated in 2022 and 2023, and the reason is arithmetic, not behavior.</p>
+    <p>In 2022, used car prices were near all-time highs. The Manheim Used Vehicle Value Index, the standard measure of wholesale used vehicle prices in the United States, was still elevated from pandemic-era supply distortions. Lenders competing for origination volume underwrote loans against collateral values that assumed those prices would hold. Interest rates were also rising sharply through 2022 and 2023, which pushed monthly payments higher and stretched loan terms to compensate.</p>
+    <p>When a borrower defaults today, the lender repossesses the vehicle and sells it at wholesale auction. The Manheim index peaked at 215.3 in March 2026 before falling 1.6% in April to 211.9. For loans written when vehicle values were higher and credit assumptions more optimistic, the recovery on repossession often falls short of the outstanding loan balance. The lender absorbs the difference as a credit loss.</p>
+    <p>This is a collateral problem layered on top of a credit quality problem. The 2022 vintage was underwritten with recovery rate assumptions that the current market cannot support.</p>
+    <p>Annualized net losses on subprime auto ABS pools rose to 8.88% in 2025 from 8.51% in 2024, according to S&P Global Ratings data. Auto ABS issuance runs at approximately $122 billion per year. At that scale, each incremental percentage point of loss increase translates to hundreds of millions of dollars absorbed by investors in the most subordinate deal tranches.</p>
+
+    <h2>Who Gets Forced</h2>
+    <p>The lenders most exposed are non-bank finance companies that fund themselves through the ABS market. Santander Consumer USA, Exeter Auto Receivables, and Westlake Financial are among the largest issuers. All three have reduced or eliminated their below-investment-grade ABS issuance, because the cost of subordinate debt has risen to the point where it is cheaper to seek alternative funding. When major issuers stop selling below-IG paper, that is not a sign of strength. It is an admission that residual and subordinate tranche investors are no longer absorbing risk at current pricing.</p>
+    <p>The equity effects are visible. America's Car Mart, a publicly traded used-vehicle retailer that originates its own subprime loans, was trading near $11 per share in early 2026, down 93% from its all-time high. CarMax Auto Finance, the captive lending arm of CarMax, reported that finance income fell 11.2% in the first nine months of fiscal 2026. The allowance for loan losses as a percentage of total auto loans held for investment increased 26 basis points over the same period, driven by loans originated in 2022 and 2023 when vehicle prices were elevated.</p>
+    <p>Ally Financial, the largest dedicated auto lender in the United States, recorded retail auto net charge-offs of $417 million and a provision for credit losses totaling $467 million in the first quarter of 2026. Retail auto net charge-offs ran at 197 basis points. Tricolor Holdings, a subprime auto lender whose ABS deals were backed by JPMorgan, Barclays, and BlackRock, collapsed in September 2025 after fraud allegations. The collapse was a concrete example of how ABS investor exposure crystallizes when collateral performance breaks below deal structure assumptions.</p>
+
+    <h2>The Failure Path</h2>
+    <p>The damaging sequence does not require a recession. It requires only that the current stress continues long enough for second-order effects to compound.</p>
+    <p>Sustained high delinquency rates raise ABS funding costs for non-bank lenders. Higher funding costs force those lenders to tighten underwriting or exit subprime origination. Tighter standards reduce the pool of qualified borrowers, which reduces auto sales in the segment. Lower sales volumes reduce dealer profitability. Dealers with captive finance arms face simultaneous pressure on origination volume and credit loss provisions. Both CarMax and America's Car Mart are already demonstrating this pattern.</p>
+    <p>The repossession side compounds this. The New York Fed data shows vehicle repossessions running near 1.73 million annually. As those vehicles enter wholesale auctions, downward pressure on the Manheim index builds. Lower used car values raise loss severity on future repossessions, which increases ABS pool losses, which widens funding spreads further for originators. The loop closes on itself without any single dramatic event.</p>
+    <p>The equity exposure runs across lenders, dealer stocks, and any bank holding a meaningful auto loan book. Capital One, which has a substantial auto lending operation, has also been increasing provisions. The common thread is that every institution that originated or funded subprime auto credit in 2022 and 2023 is now carrying a loan book performing below the assumptions used to price it.</p>
+
+    <h2>What I'm Watching</h2>
+    <p>Three signals matter. First, the Manheim Used Vehicle Value Index on a month-over-month basis. Any sustained decline from the April 2026 level of 211.9 directly increases loss severity on outstanding subprime pools. Repossession economics become more punishing the further collateral values fall from the levels at which loans were underwritten.</p>
+    <p>Second, ABS spread data from S&P Global and Moody's on subprime auto tranches. The point at which major issuers stop entering the market even for investment-grade paper will mark a meaningful tightening in the availability of subprime auto credit nationally. That point is not far from the current posture of Santander Consumer USA and Westlake.</p>
+    <p>Third, quarterly net charge-off disclosures from Ally Financial and Capital One. Both report these numbers clearly and consistently. Any deterioration from the Q1 2026 Ally baseline of 197 basis points would signal that 2022 and 2023 vintage losses have not been fully recognized yet, meaning the provisions being built today are inadequate for the losses still coming.</p>
+
+    <h2>How This Thesis Fails</h2>
+    <p>Tariffs on imported vehicles, if they remain in effect, could support new car prices and spill into used vehicle valuations. The Manheim index's resilience through early 2026 reflects this dynamic in part. If tariff-driven supply constraints sustain used car prices near current levels, recovery rates on repossessions improve and ABS pool losses stop widening.</p>
+    <p>Federal Reserve rate cuts, if they materialize in the second half of 2026, would reduce the cost of new origination for borrowers at every credit tier. Lower rates do not directly improve recovery rates on existing delinquent loans, but they ease conditions for the forward book and could slow the pace of new defaults in the 2024 and 2025 vintage pools.</p>
+    <p>A sustained strong employment market also changes the calculus. If subprime borrowers hold their jobs and continue to make payments on the 2024 and 2025 vintages at better rates than the 2022 cohort, the loss pool does not grow, even as existing delinquencies work through the system. New York Fed data through Q1 2026 shows that transitions into early delinquency on auto loans held steady rather than accelerating. That is not a recovery, but it suggests the worst of the new-vintage deterioration may have already occurred.</p>
+
+    <h2>Closing Thoughts</h2>
+    <p>The auto loan market is not in systemic collapse. The losses are concentrated, traceable, and not contagious in the way mortgage losses were in 2008. The problem is that concentrated losses in thinly capitalized non-bank lenders still produce meaningful equity repricing across dealers, captive finance arms, and banks that chose to participate in 2022 and 2023 origination.</p>
+    <p>The repossessions are already happening. The losses are already printing.</p>
+
+    <div class="plain-english">
+      <h2>Plain English</h2>
+      <p>Even though people are still buying cars and the overall economy looks stable, there is a quiet problem building in the auto lending market that you don't hear much about. I argue this because millions of car loans made in 2022 and 2023 were written when car prices were at their highest point in decades, and now that many borrowers cannot make their payments, the companies that made those loans are getting back cars worth less than what is still owed on them, which forces them to absorb the difference as a loss. Although things have looked manageable for now, those losses are already showing up in the earnings of finance companies and dealer stocks, and the share of missed auto loan payments just hit its highest point in 32 years. If this keeps going, you may find it harder to get a car loan, especially if your credit is not perfect, as lenders tighten who they will lend to and on what terms.</p>
+    </div>
+  </div>
+
+  <a href="/" class="back-link">&#8592; Back to all issues</a>
+
+  <footer>
+    <span>The Weekly Bullrun</span>
+    <span>&#169; 2026 Alessio Cipriano</span>
+  </footer>
+</div>
+<script>
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const now = new Date();
+  document.getElementById('live-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+</script>
+</body>
+</html>
