@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — The Weekly Bullrun</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="About The Weekly Bullrun — a weekly financial markets newsletter by Alessio Cipriano covering underrepresented economic forces.">
+<meta property="og:title" content="About — The Weekly Bullrun">
+<meta property="og:description" content="About The Weekly Bullrun — a weekly financial markets newsletter by Alessio Cipriano.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weeklybullrun.com/about.html">
+<meta name="twitter:card" content="summary">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
@@ -33,11 +40,14 @@
   </nav>
   <h1 class="page-title">About</h1>
   <div class="about-body">
-    <p>Coming soon. Stay tuned.</p>
+    <p>The Weekly Bullrun is a financial markets newsletter focused on the parts of the economy that mainstream coverage misses. Every issue covers one specific mechanism — a credit dislocation, a supply shock, a regulatory shift, a collateral problem — and traces how it moves through equity markets. No Fed commentary, no S&amp;P 500 recaps. The goal is to write about what is actually happening before it becomes obvious.</p>
+    <p>I started this newsletter because most financial writing either talks down to readers or buries the real story in jargon. I wanted to write something that respects the reader's intelligence and gets to the mechanism fast. Six issues in, that is still the standard I hold every piece to.</p>
+    <p>I'm Alessio Cipriano, a finance student with a focus on capital markets and credit. My interest is in the parts of the market that are underpriced by attention — small regional banks, commodity cycles, insurance dislocations, structured credit — areas where the data is public but the analysis is thin. That is what this newsletter covers.</p>
+    <p>New issues publish weekly. If you want to follow along or reach out, find me on <a href="https://www.linkedin.com/in/alessio-cipriano" style="color:#111;">LinkedIn</a>.</p>
   </div>
   <footer>
     <span>The Weekly Bullrun</span>
-    <span>© 2026 Alessio Cipriano</span>
+    <span>© 2026 Alessio Cipriano &nbsp;·&nbsp; <a href="mailto:alessiocipriano71@gmail.com" style="color:#bbb;text-decoration:none;">Contact</a></span>
   </footer>
 </div>
 <script>
@@ -45,6 +55,14 @@
   const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const now = new Date();
   document.getElementById('live-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+  const path = window.location.pathname.split('/').pop() || '';
+  document.querySelectorAll('nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if ((href === '/' && (path === '' || path === 'index.html')) || (href !== '/' && path === href)) {
+      a.style.color = '#111';
+      a.style.fontWeight = '700';
+    }
+  });
 </script>
 </body>
 </html>
