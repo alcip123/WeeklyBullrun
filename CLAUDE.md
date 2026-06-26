@@ -80,7 +80,7 @@ Manage at: https://claude.ai/code/routines/trig_019DYrnrBdf7PdxwpeNRh1yH
 - Issue #03 (Jun 22, 2026): Commercial real estate — CMBS delinquency vs. bank book values, extension wave ending
 - Issue #04 (Jun 22, 2026): Homeowners insurance — 9% of monthly payment, homebuilder margin compression
 - Issue #05 (Jun 26, 2026): Farm debt record — China export collapse, community bank exposure, farmland collateral
-- Issue #06 (Jun 26, 2026): Apple/tech price hikes — AI memory shortage, HBM capacity grab, consumer electronics repricing
+- Issue #06 (Jun 26, 2026): Subprime auto loans — 32-year delinquency record, non-bank ABS lenders, repossession cycle
 
 ---
 
