@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue #08 — The Weekly Bullrun</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="PJM Interconnection capacity prices have risen more than tenfold in three years, the federal government invoked emergency authority to force data centers off the grid in June, and the queue for new power connections in Texas alone exceeds five times the state's generating capacity, but none of this appears in the models pricing hyperscaler stocks.">
+<meta property="og:title" content="The Power Ceiling — Emergency Orders to Curtail Data Centers Just Defined the Limit the AI Trade Hasn't Priced">
+<meta property="og:description" content="PJM Interconnection capacity prices have risen more than tenfold in three years, the federal government invoked emergency authority to force data centers off the grid in June, and the queue for new power connections in Texas alone exceeds five times the state's generating capacity, but none of this appears in the models pricing hyperscaler stocks.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://weeklybullrun.com/issue-08.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Power Ceiling — Emergency Orders to Curtail Data Centers Just Defined the Limit the AI Trade Hasn't Priced">
+<meta name="twitter:description" content="Emergency orders to curtail data centers during peak demand show the grid cannot absorb the AI buildout on the announced timeline, and it does not appear in hyperscaler earnings models.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
+
+  html { scroll-timeline: --page-scroll block; }
+  @keyframes grow-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+  #progress {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 3px;
+    background: #111;
+    transform-origin: 0 50%;
+    animation: grow-progress auto linear;
+    animation-timeline: --page-scroll;
+    z-index: 999;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 24px 48px; }
+  header { border-top: 3px solid #111; border-bottom: 1px solid #ccc; padding: 12px 0; display: flex; align-items: center; justify-content: center; position: relative; }
+  .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #111; text-decoration: none; }
+  #live-date { font-size: 13px; color: #333; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 500; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+  nav { border-bottom: 1px solid #ccc; padding: 7px 0; display: flex; gap: 20px; margin-bottom: 32px; }
+  nav a { font-size: 12px; color: #555; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+  nav a:hover { color: #111; }
+  .article-title { font-family: Georgia, 'Times New Roman', serif; font-size: 34px; font-weight: normal; line-height: 1.15; color: #111; margin-bottom: 12px; }
+  .article-deck { font-size: 17px; color: #555; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+  .article-meta { font-size: 12px; color: #aaa; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 10px 0; margin-bottom: 32px; }
+  .article-body { font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.8; color: #222; }
+  .article-body p { margin-bottom: 1.4em; }
+  .article-body h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    margin: 2em 0 0.6em;
+    line-height: 1.25;
+  }
+  .plain-english { background: #f9f9f9; border-left: 3px solid #111; padding: 16px 20px; margin-top: 2em; }
+  .plain-english h2 { font-size: 13px; font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: normal; color: #555; margin-bottom: 10px; letter-spacing: 0; text-transform: none; }
+  .plain-english p { font-size: 15px; color: #444; margin-bottom: 0; font-family: Georgia, 'Times New Roman', serif; }
+  .issue-nav { display: flex; justify-content: space-between; padding: 16px 0; margin-top: 40px; border-top: 1px solid #e5e5e5; }
+  .issue-nav a { font-size: 12px; color: #888; text-decoration: none; letter-spacing: 0.04em; }
+  .issue-nav a:hover { color: #111; }
+  .back-link { display: inline-block; margin-top: 16px; font-size: 12px; color: #888; text-decoration: none; letter-spacing: 0.04em; }
+  .back-link:hover { color: #111; }
+  footer { border-top: 1px solid #ccc; padding-top: 14px; margin-top: 40px; display: flex; justify-content: space-between; font-size: 11px; color: #bbb; }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="container">
+  <header>
+    <a href="/" class="logo">The Weekly Bullrun</a>
+    <div id="live-date"></div>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <h1 class="article-title">The Power Ceiling &#8212; Emergency Orders to Curtail Data Centers Just Defined the Limit the AI Trade Hasn&#8217;t Priced</h1>
+  <div class="article-deck">PJM Interconnection capacity prices have risen more than tenfold in three years, the federal government invoked emergency authority in June to force data centers off the grid during peak demand, and the queue for new power connections in Texas alone exceeds five times the state&#8217;s total generating capacity, but none of this appears in the forward models driving hyperscaler valuations.</div>
+  <div class="article-meta">By Alessio Cipriano &nbsp;·&nbsp; July 17, 2026 &nbsp;·&nbsp; 9:18 AM ET</div>
+
+  <div class="article-body">
+
+    <h2>Everyone Is Watching the Demand Side</h2>
+    <p>Microsoft committed $80 billion in capital expenditure for data centers in fiscal year 2026. Google announced $75 billion for the same period. Amazon declared $105 billion in 2026 spending, with the majority directed at cloud infrastructure. The consensus reading of these numbers is straightforward: electricity demand is about to surge, power generators will benefit, and the winning trade is to own generation assets before the load arrives.</p>
+    <p>That reading is partly correct. What it leaves out is that the supply side of the AI power trade has a physical ceiling that is not in the models, and the federal government demonstrated that ceiling in June.</p>
+
+    <h2>What the Emergency Orders Say</h2>
+    <p>On June 30, 2026, Energy Secretary Chris Wright signed a Section 202(c) emergency order under the Federal Power Act. The order authorized PJM Interconnection, the regional grid operator serving 65 million people across 13 states and the District of Columbia, to require data centers and large industrial loads operating at 50 megawatts or more to switch to backup diesel generators within 15 minutes of receiving an emergency signal. A prior order had been issued May 18, when PJM&#8217;s operating reserves fell below 5,800 megawatts. The June 30 authority extended through July 3.</p>
+    <p>Two emergency curtailment orders in seven weeks.</p>
+    <p>Section 202(c) of the Federal Power Act is a wartime-era provision, historically invoked for hurricanes, extreme winter events, and grid emergencies. Its application to manage data center load specifically is new. The federal government&#8217;s answer to the question of what happens when data centers absorb more grid capacity than the system can spare during peak demand was not to plan faster expansion. It was to authorize cutting data centers off.</p>
+
+    <h2>PJM Prices: The Scarcity Signal Nobody Quotes</h2>
+    <p>PJM operates an annual capacity auction in which generators receive payment for committing to be available, regardless of whether power is dispatched. The clearing price is the purest forward signal in the electricity market for how tight the system is.</p>
+    <p>In the 2023/24 delivery year, the PJM capacity clearing price was $28.92 per megawatt-day. By the 2025/26 delivery year, it was $269.92. By the 2026/27 auction, it hit the Federal Energy Regulatory Commission&#8217;s approved price cap of $329.17. The December 2025 auction settled at $333.44, pressing against the regulatory ceiling.</p>
+    <p>That is more than a tenfold increase in grid scarcity pricing in fewer than three years. Nearly every bullish equity note on AI power stocks quotes electricity demand growth projections. Almost none of them quote this number.</p>
+    <p>PJM&#8217;s most recent auction procured 145,777 megawatts of capacity, which was 6,625 megawatts below the grid operator&#8217;s own reserve margin target. Forecast peak load for the 2027/28 delivery year is approximately 5,250 megawatts above the prior year. Roughly 5,100 megawatts of that increase is attributable to data centers alone.</p>
+
+    <h2>The Queue Is the Physical Ceiling</h2>
+    <p>Capacity auction prices measure scarcity. The interconnection queue measures who is waiting for power and for how long.</p>
+    <p>In December 2024, ERCOT, the Texas grid operator, had approximately 63 gigawatts of pending large-load interconnection requests. By November 2025 that figure was 226 gigawatts, a nearly 300 percent increase in one year. By April 2026, the queue stood at approximately 410 gigawatts, roughly five times Texas&#8217;s current total generating capacity. Data centers account for between 73 and 87 percent of new large-load requests in that queue.</p>
+    <p>Average interconnection wait times in constrained ERCOT zones now run 36 to 48 months. Some locations extend to five years or longer. Historically, only about 40 percent of projects that enter ERCOT&#8217;s interconnection screening process ever reach a signed interconnection agreement.</p>
+    <p>The national picture is similar. Total U.S. interconnection queues contain approximately 2,600 gigawatts of proposed generation and storage as of early 2026, per analysis by Carbon Direct. The Energy Information Administration projects electricity prices in ERCOT could rise as much as 79 percent by 2027 from data center load alone. Large power transformers carry manufacturing backlogs of two to three years. Gas turbines are on multi-year supply chains. Nearly half of data center projects scheduled to come online in 2026 are now delayed.</p>
+    <p>The hyperscalers announcing $100 billion buildout plans are announcing a demand the physical supply chain cannot serve on the announced timeline.</p>
+
+    <h2>Who Wins and Who Gets Caught</h2>
+    <p>Merchant power generators with signed supply agreements and existing capacity have the most direct claim on the scarcity premium.</p>
+    <p>Constellation Energy reported first-quarter 2026 revenue of $11.12 billion, up 64 percent year over year. The company has signed agreements for 5.7 gigawatts of clean energy delivery to data center customers and completed its acquisition of Calpine Corporation, adding 21 gigawatts of natural gas generation capacity. The stock trades at approximately $262, against a mean analyst price target of $368. Vistra reported first-quarter 2026 earnings per share growth of 315 percent year over year and projects full-year 2026 earnings growth of approximately 77 percent. It holds nuclear power purchase agreements with Amazon Web Services and Meta Platforms and has budgeted approximately $2.59 billion in capital expenditure for 2026. NRG Energy has signed commitments for 295 megawatts across two Texas data center sites and raised its 2026 core profit guidance to between $3.93 billion and $4.18 billion.</p>
+    <p>On the other side, the hyperscalers face the risk that their buildout timelines cannot hold. Microsoft, Google, and Amazon have announced capital plans that presuppose interconnection capacity, transmission infrastructure, and generating assets that do not exist on the required schedule. When projects are delayed by three to five years, the revenue case for announced data center spending shifts out by the same amount. This is not reflected in forward earnings models for any of those companies.</p>
+
+    <h2>The Regulatory Risk That Caps the Trade</h2>
+    <p>The generator trade carries a specific risk that does not appear in most analyst notes.</p>
+    <p>Emergency curtailment authority, once invoked, tends to expand rather than retract. The May 18, 2026 order was followed by the June 30 order, which extended through July 3. PJM has indicated it will seek formal interruptible load agreements with large customers ahead of next summer. If regulators establish a standing framework for data center curtailment during peak demand periods, the revenue certainty of existing power purchase agreements weakens.</p>
+    <p>Deregulated electricity markets in the late 1990s and early 2000s produced a familiar sequence: scarcity cleared at high prices, capital flowed in, regulatory intervention repriced the market downward. The mechanism here is different. The direction is the same.</p>
+
+    <h2>What Breaks This Thesis</h2>
+    <p>Faster grid permitting is the most direct offset. Both the Biden and Trump administrations took steps to accelerate siting and approval of high-voltage transmission infrastructure under different frameworks. If those actions materially shorten interconnection timelines from three to five years to one to two, the supply constraint narrows and the scarcity premium compresses.</p>
+    <p>On-site generation removes the grid constraint for individual facilities. Bloom Energy&#8217;s 2026 Power Report projects that approximately one-third of data centers will operate fully off-grid by 2030, using fuel cells and on-site gas generation. If major hyperscalers accelerate deployment of dedicated on-site power at scale, the interconnection queue becomes irrelevant for those projects.</p>
+    <p>Nuclear power purchase agreements represent the third exit. Constellation and several small modular reactor developers have signed letters of intent with cloud providers. SMRs targeting commercial operation between 2030 and 2032 could provide a new class of firm baseload supply. Whether those schedules hold is an open question.</p>
+
+    <h2>Closing Thoughts</h2>
+    <p>The equity market has priced the demand side of the AI power trade in considerable detail. It has tracked hyperscaler capex announcements, chip supply constraints, and cloud revenue growth. It has not priced the supply side: the fact that PJM capacity prices have risen more than tenfold in three years, that the interconnection queue in Texas alone contains five times the state&#8217;s generating capacity, and that the government now holds authority to cut data centers off during peak demand.</p>
+    <p>The federal government told data centers to run on diesel in June. That is the ceiling.</p>
+
+    <div class="plain-english">
+      <h2>Plain English</h2>
+      <p>Even though artificial intelligence is clearly driving a massive wave of new computer center construction and most financial coverage frames this as an unlimited growth opportunity, the physical constraint of connecting all those buildings to the electrical grid is starting to block the buildout in ways that are not making headlines. I argue this because electrical grid operators in the United States are already running out of spare capacity, to the point where the federal government invoked emergency authority in June to force the largest data centers to switch to backup diesel generators rather than draw from the grid during peak heat. Although major technology companies have announced enormous spending plans that investors have rewarded with higher stock prices, the wait to physically connect a new data center to the power grid in Texas now runs three to five years, and roughly half of the projects planned for 2026 are already delayed. If this continues, you may start to see technology companies quietly revising their infrastructure timelines, which would put pressure on the revenue projections that currently justify some of the highest stock valuations in the market.</p>
+    </div>
+  </div>
+
+  <div class="issue-nav">
+    <a href="issue-07.html">&#8592; Issue #07</a>
+    <span></span>
+  </div>
+  <a href="/" class="back-link">&#8592; Back to all issues</a>
+
+  <footer>
+    <span>The Weekly Bullrun</span>
+    <span>&#169; 2026 Alessio Cipriano &nbsp;&middot;&nbsp; <a href="mailto:alessiocipriano71@gmail.com" style="color:#bbb;text-decoration:none;">Contact</a></span>
+  </footer>
+</div>
+<script>
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const now = new Date();
+  document.getElementById('live-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+  const path = window.location.pathname.split('/').pop() || '';
+  document.querySelectorAll('nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if ((href === '/' && (path === '' || path === 'index.html')) || (href !== '/' && path === href)) {
+      a.style.color = '#111'; a.style.fontWeight = '700';
+    }
+  });
+  const words = document.querySelector('.article-body').innerText.trim().split(/\s+/).length;
+  const mins = Math.max(1, Math.round(words / 200));
+  document.querySelector('.article-meta').innerHTML += '  &nbsp;·&nbsp;  ' + mins + ' min read';
+</script>
+</body>
+</html>
