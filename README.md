@@ -28,12 +28,4 @@ A weekly financial markets newsletter website built in plain HTML/CSS. No framew
 
 ## Style Guide for New Issues
 Voice: Direct, confident, no hedging. Build the argument step by step.
-Structure:
-  1. The Setup
-  2. The Hidden Mechanism
-  3. Who Gets Forced
-  4. The Failure Path
-  5. What I'm Watching
-  6. How This Thesis Fails
-  7. Closing Thoughts
-  8. Plain English summary
+Topic must be underrepresented — not mainstream financial news (not Fed rate decisions, S&P 500 moves, big tech earnings, etc.).

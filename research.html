@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equity Research — The Weekly Bullrun</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="description" content="Institutional-grade equity research reports. Full sell-side style analysis: DCF, comparable companies, price targets, and risk factors on under-followed mid-cap companies.">
+<meta property="og:title" content="Equity Research — The Weekly Bullrun">
+<meta property="og:description" content="Full sell-side style equity research: DCF, comps, price targets, and risk factors on under-followed mid-cap companies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weeklybullrun.com/research.html">
+<link rel="canonical" href="https://weeklybullrun.com/research.html">
+<meta name="twitter:card" content="summary">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #111; }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 24px 48px; }
+  header { border-top: 3px solid #111; border-bottom: 1px solid #ccc; padding: 12px 0; display: flex; align-items: center; justify-content: center; position: relative; }
+  .logo { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #111; text-decoration: none; }
+  #live-date { font-size: 13px; color: #333; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 500; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+  nav { border-bottom: 1px solid #ccc; padding: 7px 0; display: flex; gap: 20px; margin-bottom: 24px; }
+  nav a { font-size: 12px; color: #555; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+  nav a:hover { color: #111; }
+  .kicker { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #888; margin-bottom: 8px; font-weight: 500; }
+  .intro-block { border-bottom: 1px solid #ccc; padding-bottom: 20px; margin-bottom: 24px; }
+  .intro-title { font-family: Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: normal; color: #111; margin-bottom: 10px; line-height: 1.2; }
+  .intro-deck { font-size: 15px; color: #555; line-height: 1.65; }
+  .section-head { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; color: #555; padding-bottom: 6px; border-bottom: 2px solid #111; display: inline-block; margin-bottom: 16px; }
+
+  /* ── Research Cards ─────────────────────────────────────────────── */
+  .research-list { margin-bottom: 24px; }
+  .research-card {
+    border: 1px solid #e5e5e5;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    transition: border-color 0.15s;
+  }
+  .research-card:hover { border-color: #999; }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .card-ticker {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #fff;
+    background: #111;
+    padding: 3px 8px;
+    flex-shrink: 0;
+  }
+  .card-name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #111;
+    flex: 1;
+    min-width: 0;
+    line-height: 1.3;
+  }
+  .card-rating {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border: 1.5px solid #111;
+    color: #111;
+    flex-shrink: 0;
+  }
+  .card-rating.sell { border-color: #888; color: #888; }
+  .card-rating.hold { border-color: #aaa; color: #aaa; }
+  .card-link {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+    padding-bottom: 1px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .card-link:hover { color: #555; border-color: #555; }
+  .card-meta {
+    font-size: 11px;
+    color: #aaa;
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+  }
+  .card-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #e5e5e5;
+  }
+  .stat-cell {
+    padding: 12px 16px;
+    border-right: 1px solid #e5e5e5;
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  .stat-value {
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  .stat-value.positive { color: #1a6b1a; }
+  .stat-value.negative { color: #b92b2b; }
+  .stat-value.loading { color: #ccc; font-size: 14px; font-weight: 400; }
+  .stat-sub {
+    font-size: 10px;
+    color: #bbb;
+  }
+
+  /* ── States ─────────────────────────────────────────────────────── */
+  .loading-state { padding: 32px 0; color: #bbb; font-size: 13px; }
+  .empty-state { padding: 32px 0; color: #aaa; font-size: 14px; font-style: italic; }
+  .prices-footer {
+    font-size: 11px;
+    color: #bbb;
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  footer { border-top: 1px solid #ccc; padding-top: 14px; margin-top: 40px; display: flex; justify-content: space-between; font-size: 11px; color: #bbb; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a href="/" class="logo">The Weekly Bullrun</a>
+    <div id="live-date"></div>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="archive.html">Archive</a>
+    <a href="research.html">Research</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="kicker">Equity Research</div>
+  <div class="intro-block">
+    <div class="intro-title">Institutional-Grade Research Reports</div>
+    <div class="intro-deck">Full sell-side style analysis on under-followed mid-cap companies. Each report includes a financial model, DCF valuation, comparable companies, and a price target across bull, base, and bear scenarios. Price performance is tracked daily at market close.</div>
+  </div>
+
+  <div class="section-head">Published Reports</div>
+  <div class="research-list" id="research-list">
+    <div class="loading-state">Loading&hellip;</div>
+  </div>
+  <div class="prices-footer" id="prices-footer"></div>
+
+  <footer>
+    <span>The Weekly Bullrun</span>
+    <span>© 2026 Alessio Cipriano &nbsp;·&nbsp; <a href="mailto:alessiocipriano71@gmail.com" style="color:#bbb;text-decoration:none;">Contact</a></span>
+  </footer>
+</div>
+<script>
+  /* ── Nav date + active state ─────────────────────────────── */
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const now = new Date();
+  document.getElementById('live-date').textContent = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+  const path = window.location.pathname.split('/').pop() || '';
+  document.querySelectorAll('nav a').forEach(a => {
+    const href = a.getAttribute('href');
+    if ((href === '/' && (path === '' || path === 'index.html')) || (href !== '/' && path === href)) {
+      a.style.color = '#111';
+      a.style.fontWeight = '700';
+    }
+  });
+
+  /* ── Research cards ──────────────────────────────────────── */
+  (async function () {
+    const list = document.getElementById('research-list');
+    const footer = document.getElementById('prices-footer');
+
+    try {
+      const [stocksData, pricesData] = await Promise.all([
+        fetch('stocks.json').then(r => r.json()),
+        fetch('prices.json').then(r => r.json()).catch(() => ({ prices: {}, last_updated: null }))
+      ]);
+
+      const stocks = stocksData.stocks || [];
+      const prices = pricesData.prices || {};
+
+      if (stocks.length === 0) {
+        list.innerHTML = '<div class="empty-state">No reports published yet. First report coming soon.</div>';
+        return;
+      }
+
+      list.innerHTML = '';
+
+      stocks.forEach(stock => {
+        const priceInfo = prices[stock.ticker];
+        const currentPrice = (priceInfo && priceInfo.price != null) ? priceInfo.price : null;
+        const entryPrice = stock.entry_price;
+        const isSell = stock.rating === 'sell';
+        const isHold = stock.rating === 'hold';
+
+        /* % change since report */
+        let pctChange = null;
+        if (currentPrice !== null) {
+          pctChange = ((currentPrice - entryPrice) / entryPrice) * 100;
+        }
+
+        /* For BUY: up = good (green). For SELL: down = good (green). HOLD: no color. */
+        let pctClass = '';
+        if (pctChange !== null && !isHold) {
+          const isGood = isSell ? pctChange < 0 : pctChange > 0;
+          pctClass = pctChange === 0 ? '' : (isGood ? 'positive' : 'negative');
+        }
+
+        const pctDisplay = pctChange !== null
+          ? (pctChange >= 0 ? '+' : '') + pctChange.toFixed(2) + '%'
+          : '—';
+
+        const currentDisplay = currentPrice !== null ? '$' + currentPrice.toFixed(2) : '—';
+        const currentClass = currentPrice !== null ? '' : 'loading';
+
+        const ratingClass = stock.rating === 'sell' ? 'sell' : (stock.rating === 'hold' ? 'hold' : '');
+        const ratingLabel = stock.rating.charAt(0).toUpperCase() + stock.rating.slice(1);
+
+        const thirdLabel = isSell ? 'Short Thesis' : (isHold ? 'Price Change' : 'Return Since Report');
+        const thirdSub = isSell ? '↓ = thesis working' : 'vs. entry';
+
+        const reportDate = (() => {
+          const d = new Date(stock.report_date + 'T12:00:00');
+          return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        })();
+
+        const card = document.createElement('div');
+        card.className = 'research-card';
+        card.innerHTML =
+          '<div class="card-header">' +
+            '<span class="card-ticker">' + stock.ticker + '</span>' +
+            '<span class="card-name">' + stock.company + '</span>' +
+            '<span class="card-rating ' + ratingClass + '">' + ratingLabel + '</span>' +
+            '<a href="' + stock.report_file + '" class="card-link">View Report →</a>' +
+          '</div>' +
+          '<div class="card-meta">' + stock.sector + ' &nbsp;&middot;&nbsp; Report published ' + reportDate + '</div>' +
+          '<div class="card-stats">' +
+            '<div class="stat-cell">' +
+              '<div class="stat-label">Entry Price</div>' +
+              '<div class="stat-value">$' + entryPrice.toFixed(2) + '</div>' +
+              '<div class="stat-sub">at time of report</div>' +
+            '</div>' +
+            '<div class="stat-cell">' +
+              '<div class="stat-label">Current Price</div>' +
+              '<div class="stat-value ' + currentClass + '">' + currentDisplay + '</div>' +
+              '<div class="stat-sub">as of market close</div>' +
+            '</div>' +
+            '<div class="stat-cell">' +
+              '<div class="stat-label">' + thirdLabel + '</div>' +
+              '<div class="stat-value ' + pctClass + '">' + pctDisplay + '</div>' +
+              '<div class="stat-sub">' + thirdSub + '</div>' +
+            '</div>' +
+          '</div>';
+
+        list.appendChild(card);
+      });
+
+      /* Prices last-updated timestamp */
+      if (pricesData.last_updated) {
+        const d = new Date(pricesData.last_updated);
+        const label = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+        footer.textContent = 'Prices last updated: ' + label + ' at market close.';
+      }
+
+    } catch (err) {
+      list.innerHTML = '<div class="empty-state">Could not load research data. Please try refreshing.</div>';
+    }
+  })();
+</script>
+</body>
+</html>

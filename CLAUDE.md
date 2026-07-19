@@ -15,10 +15,57 @@ DNS: Cloudflare (DNS-only, not proxied)
 - `issue-01.html` through `issue-XX.html` — individual articles
 - `CNAME` — contains `weeklybullrun.com`
 
+## How to Add a New Research Report
+
+### File structure
+- `research.html` — research landing page (dynamically renders cards from stocks.json + prices.json)
+- `stocks.json` — list of tracked stocks (edit this to add/remove reports)
+- `prices.json` — auto-updated daily by GitHub Actions at market close (do not edit manually)
+- `research-template.html` — copy this for each new report, replace all [bracketed] placeholders
+- `scripts/update_prices.py` — fetches prices via yfinance; `scripts/requirements.txt` — Python deps
+- `.github/workflows/update-prices.yml` — runs at 21:30 UTC (5:30 PM EDT) on weekdays
+
+### What the report page contains
+Each `research-NN.html` page shows ONLY:
+- Cover block: ticker, exchange, company name, sector, rating badge, 12-month price target, current price, implied upside
+- Key stats strip: market cap, EV, EV/EBITDA, P/E, revenue growth, EBITDA margin
+- Report meta line: author, date, report number
+- A single "Download Full Report (PDF)" button linking to the PDF
+- NO reading progress bar (progress bars are for issue pages only, not research pages)
+- NO body text, sections, tables, or analysis on the HTML page — all analysis lives in the PDF
+
+### Steps to add a new report
+1. Copy `research-template.html` to `research-NN.html` (next number in sequence)
+2. Replace all `[bracketed]` placeholders and `XX.XX`/`X.X%` values with real data from the report
+   - Also update the `og:url` meta tag and `<link rel="canonical">` tag from `research-01.html` to the real `research-NN.html` filename
+3. Place the PDF at `pdfs/TICK-report.pdf` and update the download button href accordingly
+4. Add an entry to `stocks.json` under the `"stocks"` array:
+```json
+{
+  "ticker": "TICK",
+  "company": "Company Name Inc.",
+  "sector": "Sector · Industry",
+  "rating": "buy",
+  "entry_price": 45.00,
+  "report_date": "YYYY-MM-DD",
+  "report_file": "research-NN.html"
+}
+```
+   - `rating` must be one of: `"buy"`, `"hold"`, `"sell"`
+   - `entry_price` is the stock price on the day the report was published
+   - `report_file` points to the `research-NN.html` page (not directly to the PDF)
+5. The GitHub Action will fetch the first price at the next weekday market close
+6. To trigger a manual price update immediately: GitHub → Actions → "Update Stock Prices" → Run workflow
+
+### Color logic for performance tracking
+- **BUY**: % change is green if positive (stock up = thesis working), red if negative
+- **SELL**: % change is green if negative (stock down = thesis working), red if positive
+- **HOLD**: % change shown in neutral grey
+
 ## How to Add a New Issue
 1. Copy `issue-01.html` exactly (all CSS, all HTML structure)
 2. Name it `issue-XX.html` (next number in sequence)
-3. Update only: page title, article-title, article-deck, article-meta date + time, all h2 headings and p paragraphs, plain-english section
+3. Update only: page title, article-title, article-deck, article-meta date + time, all h2 headings and p paragraphs, plain-english section, the `og:url` meta tag, and the `<link rel="canonical">` tag (both must point to the new `issue-XX.html`, not issue-01)
    - The article-meta line must include the publish time in ET: `By Alessio Cipriano &nbsp;·&nbsp; [Date] &nbsp;·&nbsp; [H:MM AM/PM ET]`
    - Capture the exact current time by running: `powershell -Command "[System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date), 'Eastern Standard Time').ToString('h:mm tt')"` — use that output directly. Never approximate or default to a round number.
 4. Update `index.html`: change hero to new issue, add article-row above `<!-- NEW ISSUES GO HERE -->`. Use `href="/"` for all homepage links, never `href="index.html"`
@@ -126,9 +173,22 @@ Confident without false certainty. Analytical, not promotional. Precise, not dra
 - Closing section: two short sentences. The second lands harder than the first.
 
 ### Article Structure
-Issues #01–#05 used a fixed heading template (Who Gets Forced / The Failure Path / What I'm Watching / How This Thesis Fails / Closing Thoughts). From Issue #06 onward, do NOT use those fixed headings. Use descriptive h2 headings that fit the specific narrative of each article. The Plain English section remains required on every article.
 
-Suggested flow (adapt freely):
+**HEADING RULE — MANDATORY, NO EXCEPTIONS:**
+Every h2 heading must be descriptive and specific to the article's narrative. Generic template headings are STRICTLY FORBIDDEN. This means NEVER use: "Who Gets Forced", "The Failure Path", "What I'm Watching", "How This Thesis Fails", "Closing Thoughts", or any other reusable label. Every heading must read like a statement or claim about the specific subject matter of that section — a reader should be able to understand the article's argument from the headings alone.
+
+WRONG: "Who Gets Forced"
+RIGHT: "The Rural Hospital With No Negotiating Power"
+
+WRONG: "The Failure Path"
+RIGHT: "When the Interconnection Queue Hits a Five-Year Wait"
+
+WRONG: "Closing Thoughts"
+RIGHT: "The Number That Grows Every Year"
+
+The Plain English section is the only heading that is allowed to remain consistent across issues.
+
+Suggested section flow (adapt freely — headings must be custom):
 1. Open with the specific event or number — what just happened
 2. Explain the mechanism that caused it
 3. Show who else is affected and how it spreads
